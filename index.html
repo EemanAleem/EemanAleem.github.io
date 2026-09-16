@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <title>Eeman Aleem</title>
+    <link rel="preload" href="assets/blackhole_fixed.mp4" as="video" type="video/mp4">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Video Element -->
+    <video id="bg-video" src="assets/blackhole_fixed.mp4" autoplay loop muted playsinline webkit-playsinline></video>
+
+    <header class="header">
+        <a href="#home" class="logo">
+            <span>Eeman Aleem</span>
+        </a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#resume">Resume</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#certs">Certs</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="gradient-btn">Contact Me</button>
+    </header>
+
+    <div class="container">
+
+        <div class="section" id="home">
+            <div class="home-content">
+                <h1>Eeman Aleem</h1>
+                <div class="subtitle">
+                    <p>3rd Year Mechatronics Engineering Student</p>
+                    <p>University of Waterloo</p>
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class="bx bxl-github"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bx bxl-linkedin-square"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bf bx-at"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="home-img">
+                    <img src="assets/eeman.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section" id="about">
+            <div class="about-me">
+                <h2>About Me</h2>
+                <p>Heyu, I'm <strong>Eeman Aleem</strong>, a <strong>3rd-year Mechatronics Engineering</strong> student at the <strong>University of Waterloo</strong>! 
+                
+                I am currently seeking <strong>GNC & Embedded Software Engineering</strong> internships in the space and aerospace industry where I can apply my 
+                experience in embedded software, control algorithms, and low-level firmware development. 
+                </p>
+                <p>In my previous internships, I've worked as a(n):</p> 
+                <ul>
+                    <li>Embedded Software Engineer at Teledyne FLIR</li>
+                    <li>Software Power Optimization Engineer at Ford Motor Company</li>
+                    <li>Hardware Test Engineering & Research Intern at Standard BioTools</li>
+                    <li>Project Lead and Software Developer at the UWaterloo WATiMake Lab</li>
+                </ul>
+                <p>
+                Beyond my industry experience, I am the <strong>Embedded Flight Software (EFS) and Controls Lead</strong> for the <strong>Waterloo Aerial Robotics Group (WARG) 
+                student design team</strong>, where I direct the controls software, firmware and system architectural development on a 100+ member UAV subteam. In the past,
+                I've been the <strong>Firmware & Software Lead</strong> for the <strong>UW Deep Blue</strong> design team building an autonomous aquatic drone for the RoboSub competition!
+                </p>
+                <p>
+                I'm incredibly passionate about <strong>astrophysics, controls and embedded systems</strong>, and what space has to offer in terms of exploration, research, and 
+                innovation! I'm also an avid high-fantasy author. I love that the millennia-old, human, tradition with the stars in our stories has fuelled our drive to explore the universe and deep unknown beyond it.
+                </p>
+            </div>
+        </div>
+
+        
+        <div class="section" id="resume">
+            <div class="resume">
+                    <h2>Resume</h2>
+                <div class="resume-experience">
+                    <h3>Teledyne FLIR</h3>
+                    <h4>Embedded Software Engineering Intern</h4>
+                    <ul>
+                        <li>Developed a custom PD control algorithm in C on STM32, TI C2000 and TMS32 microcontrollers to manage thermal performance in internal cooling fans, reducing power consumption by 72% across target devices.</li>
+                        <li>Diagnosed real-time embedded failures across STM32 and C2000 targets using JTAG, GDB, & serial debuggers; developed test scripts and isolated state-machine, timing & control-logic faults in a C/Python codebase.</li>
+                        <li>Designed deterministic sensor telemetry pipelines at 1–60 Hz over CAN and UDP, achieving low-latency state feedback streaming for real-time ground control monitor systems.</li>
+                    </ul>
+                </div>
+                <div class="resume-experience">
+                    <h3>Waterloo Aerial Robotics Group (WARG) Student Design Team</h3>
+                    <h4>Embedded Flight Software (EFS) Lead and Project Manager</h4>
+                    <ul>
+                        <li>Spearheading flight software architecture and GNC integration for WARG's 40+ member EFS subteam, guiding technical execution across embedded software, firmware, and flight controls development for autonomous UAVs.</li>
+                        <li>Engineering FBWA/FBWB PID control algorithms and path management logic in C++, enabling attitude management, autonomous waypoint tracking, and altitude hold for fixed-wing navigation.</li>
+                        <li>Developing an INS Extended Kalman Filter (EKF) in Python to fuse IMU, magnetometer, and GPS telemetry, executing non-linear state estimation and quaternion attitude determination under high-noise flight conditions.</li>
+                        <li>Architecting a fixed-wing fly-by-wire SIL simulation in MATLAB/Simulink to model partially-non-linear attitude dynamics for closed-loop GNC strategy validation prior to flight hardware deployment.</li>
+                    </ul>
+                </div>
+                <div class="resume-experience">
+                    <h3>Ford Motor Company</h3>
+                    <h4>Embedded Software Performance, Stability, and Power Optimization Intern</h4>
+                    <ul>
+                        <li>Developed GoogleTest unit tests on Linux for a C++ power management service within a high-velocity CI/CD framework, boosting branch coverage by 25.4% across multiple power management repositories.</li>
+                        <li>Utilized a Git, Jenkins, SonarQube and Jira pipeline to resolve critical, major and minor code smells, increasing code quality by 65.6%.</li>
+                    </ul>
+                </div>
+                <div class="resume-experience">
+                    <h3>Waterloo Deep Blue Student Design Team</h3>
+                    <h4>Firmware Lead</h4>
+                    <ul>
+                        <li>Created bare-metal drivers in C for the STM32F411RC board such as the GPIO, UART Receive & Transmit, ADC, Timer and I2C drivers.</li>
+                        <li>Debugged firmware drivers by analyzing serial outputs via RealTerm, leading to accurate communication.</li>
+                        <li>Developed a micro-ROS communication link between a STM32H753ZI client and a NVIDIA Jetson Nano agent (with Ubuntu) for real-time coordination between perception and sensor systems.</li>
+                        <li>Analyzed and reviewed an existing FreeRTOS-based C++ codebase to assess its real-time scheduling, task prioritization, and inter-task communication, strengthening foundational knowledge of RTOS development.</li>
+                        <li>Authored tutorial documents on developing firmware drivers and information documents on MCU architecture.</li>
+                    </ul>
+                </div>
+                <div class="resume-experience">
+                    <h3>Standard BioTools</h3>
+                    <h4>Hardware Test Engineering & Research Intern</h4>
+                    <ul>
+                        <li>Optimized pulser design by eliminating parasitic capacitance in the pulser’s PCB, reducing power consumption by 50% & improving thermal dissipation by 20%. This enabled a 1.5x increase in pulsing speed.</li>
+                        <li>Characterized SiCFETs under 1500 V and 120 kHz conditions by analyzing waveform, capacitive and thermal characteristics, testing and eliminating transistor candidates for optimized switching performance.</li>
+                        <li>Refined PCB thermal management by evaluating stack impedance contributions, thermal interface materials and via configurations to maintain component temperatures below 125°C for reliable manufacturability.</li>
+                    </ul>
+                </div>
+                <div class="resume-experience">
+                    <h3>University of Waterloo WATiMake Lab</h3>
+                    <h4>Project Lead & Software Developer</h4>
+                    <ul>
+                        <li>Designed a course project for 3rd year undergraduates alongside Faculty Professors & WATiMake Engineers.</li>
+                        <li>Implemented closed-loop PID control and kinematic dynamic models in Python on a Raspberry Pi 5, stabilizing a 3-RPS parallel manipulator for high-precision payload pointing.</li>
+                        <li>Architected I2C comms with an Arduino Mega in C++ to achieve ball balancing at 91% operational efficiency.</li>
+                        <li>Developed an object detection algorithm tracking the ball’s coordinates using OpenCV with an 87% accuracy.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="portfolio">
+            <div class="portfolio">
+                <h2>Portfolio!</h2>
+                <div class="portfolio-project">
+                    <h3>Quadruple Star System Simulator & Calculator</h3>
+                    <h4>Developer and Researcher</h4>
+                    <ul>
+                        <li>Researched contemporary astrophysics data to formulate an Excel-based computational model that calculates the properties and orbital positions of celestial bodies (stars, planets, major and minor moons, and asteroids).</li>
+                        <li>Initiated the development of a dynamic mobile application using Python, designed to simulate a user-input-driven solar system containing up to 4 stars with MATLAB.</li>
+                    </ul>
+                </div>
+                <div class="portfolio-project">
+                    <h3>SARGe (Search and Rescue Giganotosaurus) Robot</h3>
+                    <h4>Director & Software Developer</h4>
+                    <ul>
+                        <li>Led a 4-person team to program (in a specialized version of C) and build a prototypical search-and-rescue robot.</li>
+                        <li>Includes functionalities such as: an obstacle avoidance program that reduced collision incidents by a rate of 95%; an infrared navigation system and sound detection system with a locator accuracy rate of 80% and 87%.</li>
+                        <li>As a result, the time taken to rescue survivors decreased by a remarkable 50%.</li>
+                    </ul>
+                </div>
+                <div class="portfolio-project">
+                    <h3>Employee & Tool Security System Prototype (ETSS)</h3>
+                    <h4>Director & Software Developer</h4>
+                    <ul>
+                        <li>Won the ACRES Industry Innovation Competition, run by ACRES Enterprises and Thompson Rivers University.</li>
+                        <li>Technologies used: C++, Arduino Mega, Sketchfab, various sensors & actuators.</li>
+                        <li>Implemented two-factor authentication on site and inventory rooms; engineered a 100% accurate tool-tracking system; developed alarms of intrusion; designed a database program, recording employees’ and tools’ locations.</li>
+                    </ul>
+                </div>
+                <div class="portfolio-project">
+                    <h3>“Light in my Hands” 3D Animated Short Film</h3>
+                    <h4>Sole Animator</h4>
+                    <p>Created a 3D model and implemented innovative character animations in a 3D environment using Blender, Onshape and Sketchfab. 
+                        Manipulated light, color, and shadow to efficiently convey cinematic motion.</p>
+                    <div class="portfolio-images">
+                        <video
+                            src="assets/light-in-my-hands.mp4"
+                            class="portfolio-image device"
+                            autoplay
+                            loop
+                            muted
+                            playsinline>
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section" id="certs">
+            <h2>Certifications</h2>
+            <div class="certifications">
+                <div class="certification">
+                    <h3></h3>
+                    <h4></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>Contact Me</h2>
+                <div class="contact-me">
+                    <p>
+                        
+                    </p>
+                </div>
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
