@@ -14,11 +14,12 @@ html {
     --bg-color: #080808;
     --second-bg-color: #101010;
     --text-color: white;
-    --neon-red: #E80000;
-    --faded-red: rgb(255, 78, 78);
-    --light-red: #FF1D15;
+    --neon-red: #FF0000;
+    --faded-neon-red: #FF3030;
+    --light-red: #FF6565;
+    --light-light-red: #FFC2C2;
     --deep-red: rgb(124, 0, 0);
-    --orange: #FC5800;
+    --orange: #FF7700;
     --yellow: #ffa600;
 }
 
@@ -26,7 +27,7 @@ html {
     max-width: 2000px;
     margin-left: auto;
     margin-right: 5%;
-    width: 50%;
+    width: 53%;
     box-sizing: border-box;
 }
 
@@ -74,14 +75,9 @@ html {
     transform: scale(1.05);
 }
 span {
-    background: linear-gradient(
-        270deg,
-        var(--yellow) 10%,
-        var(--light-red) 100%
-    );
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: var(--faded-neon-red);
     white-space: pre-line;
 }
 .navbar a {
@@ -93,14 +89,9 @@ span {
     border-bottom: 3px solid transparent; 
 }
 .navbar a:hover {
-    background: linear-gradient(
-        270deg,
-        var(--orange) 10%,
-        var(--light-red) 100%
-    );
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: var(--faded-neon-red);
 }
 .gradient-btn {
     font-size: 1.5rem;
@@ -162,18 +153,18 @@ span {
     font-size: 2rem;
     padding: 0.75rem;
     background: transparent;
-    border: 2px solid var(--orange);
+    border: 2px solid var(--faded-neon-red);
     border-radius: 50%;
-    color: var(--orange);
+    color: var(--faded-neon-red);
     margin: 1rem 0.5rem;
     transition: 0.3s ease-in-out;
 }
 .social-icons a:hover{
-    color: var(--deep-red);
-    background-color: var(--orange);
-    transform: scale(1.2)translateY(-5px);
-    border: 2px solid var(--orange);
-    box-shadow: 0 0 25px var(--orange);
+    color: var(--bg-color);
+    background-color: var(--faded-neon-red);
+    transform: scale(1.05);
+    border: 2px solid var(--faded-neon-red);
+    box-shadow: 0 0 25px var(--faded-neon-red);
 }
 .btn-group {
     display: flex;
@@ -186,17 +177,17 @@ span {
     padding: 0.8rem 1.3rem;
     background-color: black;
     font-size: 1.5rem;
-    color: var(--orange);
-    border: 2px solid var(--orange);
+    color: var(--light-red);
+    border: 2px solid var(--light-red);
     font-weight: 600;
     transition: 0.3s ease-in-out;
     border-radius: 3rem;
 }
 .btn:hover {
     transform: scale(1.05);
-    color: var(--deep-red);
-    background-color: var(--orange);
-    box-shadow: 0 0 25px var(--orange);
+    color: var(--bg-color);
+    background-color: var(--light-red);
+    box-shadow: 0 0 25px var(--light-red);
 }
 
 
@@ -229,14 +220,11 @@ p {
 }
 
 h1 {
-    background: linear-gradient(
-        270deg,
-        var(--yellow) 10%,
-        var(--light-red) 100%
-    );
+    color: var(--neon-red);
+    text-shadow: 0 0 8px rgba(255, 23, 68, 0.6);
+
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
     white-space: pre-line;
 
     font-size: 5rem;
@@ -249,16 +237,11 @@ h1 {
 }
 
 h2 {
-    /* background: linear-gradient(
-        270deg,
-        var(--yellow) 65%,
-        var(--neon-red) 100%
-    ); */
-    background-color: var(--light-red);
+    color: var(--faded-neon-red);
+    text-shadow: 0 0 6px rgba(255, 23, 68, 0.6);
 
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
     white-space: pre-line;
     
     font-size: 2.5rem;
@@ -270,67 +253,317 @@ h2 {
 }
 
 h3 {
-    color: var(--orange);
-    font-size: 1.35rem;
+    color: var(--light-red);
+    font-size: 1.3rem;
     font-style: bold;
     font-weight: 600;
     line-height: normal;
     text-align: left;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
 
 h4 {
-    color: var(--yellow);
-    font-size: 1.1rem;
+    color: var(--light-light-red);
+    font-size: 1rem;
     font-style: italic;
-    font-weight: 450;
+    font-weight: 600;
     line-height: normal;
     text-align: left;
-    margin-top: 0.25rem;
     margin-top: 0.25rem;
 }
 
 strong {
-    color: var(--faded-red);
+    color: var(--light-red);
     font-weight: 550;
+}
+
+.resume-experience p, .resume-experience ul {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Resume Timeline Bar & Date Styling */
+.resume-experience {
+    position: relative;
+    padding-left: 140px;
+    margin-bottom: 2.5rem;
+}
+
+/* Neon-Red Vertical Timeline Bar */
+.resume-experience::before {
+    content: '';
+    position: absolute;
+    left: 115px;
+    top: 0;
+    bottom: -2.5rem;
+    width: 2px;
+    background-color: var(--neon-red);
+    box-shadow: 0 0 8px var(--neon-red);
+}
+
+.resume-experience:last-child::before {
+    bottom: 0;
+}
+
+/* Timeline Node / Dot */
+.resume-experience::after {
+    content: '';
+    position: absolute;
+    left: 111px;
+    top: 0.35rem;
+    width: 10px;
+    height: 10px;
+    background-color: var(--neon-red);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--neon-red);
+    z-index: 1;
+}
+
+/* Small Neon-Red Date Text */
+.resume-date {
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
+    width: 100px;
+    text-align: right;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--neon-red);
+    line-height: 1.25;
+}
+
+/* Adjust headings alignment when inside timeline */
+.resume-experience h3 {
+    margin-top: 0;
+    margin-top: 2rem;
+}
+
+/* Resume Technical Skills Section */
+.resume-skills {
+    margin-bottom: 2.5rem;
+}
+
+.resume-skills h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.resume-skills ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.resume-skills li {
+    margin-bottom: 0.4rem;
 }
 
 /* Portfolio Projects */
 
-
-
-
-.resume-experience glass-panel li, .portfolio-project glass-panel li {
-    margin-bottom: 14px;
-    line-height: 1.4rem;
-    text-align: justify;
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 
-.resume-experience glass-panel a, .portfolio-project glass-panel a {
-    color: #FF8A8A;
-    text-decoration: underline;
-}
-
-.portfolio-images {
-    width: 100%;
+.portfolio-project {
     display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    border: 1px solid var(--light-light-red);
+    border-radius: 8px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.portfolio-image.device {
-    flex: 0 0 auto;
+.portfolio-project:hover {
+    border-color: var(--neon-red);
+    box-shadow: 0 0 20px rgba(255, 119, 0, 0.25);
+}
+
+.portfolio-project .summary {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    color: var(--text-color);
+}
+
+/* Tag Pills */
+.portfolio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1rem;
+}
+
+.portfolio-tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.55rem;
+    border: 1px solid var(--faded-neon-red);
+    border-radius: 4px;
+    color: var(--faded-neon-red);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Dynamic Popup Overlay */
+.portfolio-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.portfolio-overlay.active {
+    display: flex;
+}
+
+.portfolio-window {
+    position: relative;
+    width: 80vw;
+    max-width: 1100px;
+    max-height: 85vh;
+    background: var(--bg-color);
+    border: 1px solid var(--light-red);
+    border-radius: 10px;
+    padding: 2.5rem;
+    overflow-y: auto;
+    box-shadow: 0 0 30px rgba(255, 119, 0, 0.3);
+}
+
+.portfolio-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2.2rem;
+    color: var(--light-red);
+    cursor: pointer;
+}
+
+.portfolio-nav-btn {
+    background: transparent;
+    border: 1px solid var(--light-red);
+    color: var(--light-red);
+    font-size: 2.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.portfolio-nav-btn:hover {
+    background: var(--light-light-red);
+    color: var(--bg-color);
+}
+
+/* Link Block Buttons inside Popup */
+.portfolio-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.portfolio-link-btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--light-light-red);
+    border-radius: 6px;
+    color: var(--light-light-red);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.portfolio-link-btn:hover {
+    background: var(--light-light-red);
+    color: var(--bg-color);
+}
+
+.portfolio-project h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+.portfolio-window h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+/* Two Column Layout for Large Content Popups */
+.popup-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* Side-by-Side Media Containers & Sizing */
+.portfolio-media-group {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-media-group.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.portfolio-media-item {
+    flex: 1 1 200px;
     max-width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-media-item img,
+.portfolio-media-item video {
     width: 100%;
-    flex: 1 1 100%;
+    max-height: 280px;
+    object-fit: contain;
+    /* border: 1px solid var(--light-light-red);
+    border-radius: 6px; */
+}
+
+.media-caption {
+    font-size: 0.8rem;
+    color: var(--light-light-red);
+    margin-top: 0.4rem;
+    text-align: center;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .portfolio-media-group.two-col {
+        grid-template-columns: 1fr;
+    }
 }
 
 #bg-video {
     position: fixed;
     top: 50%;
-    left: 0%;
-    width: 150vh;
+    left: 75%;
+    width: 150vw;
     height: 150vh;
     object-fit: cover;
     z-index: -100;
@@ -344,6 +577,41 @@ strong {
 #bg-video::-webkit-media-controls {
     display: none !important;
 }
+
+/* Center the section container */
+#contact {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Stack contact elements vertically */
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Center heading inside contact */
+.contact-me h2 {
+    text-align: center;
+    position: static;
+    margin-bottom: 0.6rem;
+}
+
+/* Specific styling for the Contact section h3 */
+.contact-me h3 {
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+    max-width: 600px;
+    margin: 0.5rem 0rem;
+}
+
 
 /* Mobile Styling */
 @media (max-width: 768px) {
@@ -467,6 +735,17 @@ strong {
 
 .glass-panel.active-focus::after {
     opacity: 1;
+}
+
+.resume-experience glass-panel li, .portfolio-project glass-panel li {
+    margin-bottom: 14px;
+    line-height: 1.4rem;
+    text-align: justify;
+}
+
+.resume-experience glass-panel a, .portfolio-project glass-panel a {
+    color: #FF8A8A;
+    text-decoration: underline;
 }
 
 /* Randomize pointing angles for the first four sections */

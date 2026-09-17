@@ -5,14 +5,14 @@
     <meta name="viewport" 
     content="width=device-width, initial-scale=1.0">
     <title>Eeman Aleem</title>
-    <link rel="preload" href="assets/blackhole_fixed.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="assets/BlackHole_Final.mp4" as="video" type="video/mp4">
     <link rel="stylesheet" href="styles.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Background Video Element -->
-    <video id="bg-video" src="assets/blackhole_fixed.mp4" autoplay loop muted playsinline webkit-playsinline></video>
+    <video id="bg-video" src="assets/BlackHole_Final.mp4" autoplay loop muted playsinline webkit-playsinline></video>
 
     <header class="header">
         <a href="#home" class="logo">
@@ -25,7 +25,7 @@
             <a href="#about">About</a>
             <a href="#resume">Resume</a>
             <a href="#portfolio">Portfolio</a>
-            <a href="#certs">Certs</a>
+            <!-- <a href="#certs">Certs</a> -->
             <a href="#contact">Contact</a>
         </nav>
 
@@ -41,13 +41,13 @@
                     <p>3rd Year Mechatronics Engineering Student</p>
                     <p>University of Waterloo</p>
                     <div class="social-icons">
-                        <a href="#">
+                        <a href="https://github.com/EemanAleem">
                             <i class="bx bxl-github"></i>
                         </a>
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/eeman-aleem-023329227/">
                             <i class="bx bxl-linkedin-square"></i>
                         </a>
-                        <a href="#">
+                        <a href="#" class="copy-link" data-text="eemanaleem@gmail.com">
                             <i class="bf bx-at"></i>
                         </a>
                     </div>
@@ -89,8 +89,30 @@
         
         <div class="section" id="resume">
             <div class="resume">
-                    <h2>Resume</h2>
+                <h2>Resume</h2>
+
+                <!-- Technical Skills -->
+                <div class="resume-skills">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li><strong>GNC:</strong> PID Control Systems, Dynamic Systems Modeling, Kalman Filters, Sensor Fusion, Trajectory Generation</li>
+                        <li><strong>Languages:</strong> C++, C, Python, MATLAB, Simulink, Java, Javascript, VHDL</li>
+                        <li><strong>Protocols & Hardware:</strong> CAN, SPI, I2C, UART, UDP, TCP, Oscilloscopes, Logic Analyzers</li>
+                        <li><strong>Tools:</strong> Git, Gitlab, Bitbucket, Linux, Bash, Confluence, VS Code, TI CCS Studio, STM32CubeIDE, JTAG, GDB, Jenkins</li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
                 <div class="resume-experience">
+                    <span class="resume-date">Sept. 2023 – Apr. 2028</span>
+                    <h3>University of Waterloo</h3>
+                    <h4>Candidate for Bachelors in Mechatronics Engineering (5-year program)</h4>
+                    <p>President’s Distinction Entrance Scholarship (95%+)</p>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="resume-experience">
+                    <span class="resume-date">May 2026 – Aug. 2026</span>
                     <h3>Teledyne FLIR</h3>
                     <h4>Embedded Software Engineering Intern</h4>
                     <ul>
@@ -100,6 +122,7 @@
                     </ul>
                 </div>
                 <div class="resume-experience">
+                    <span class="resume-date">May 2025 – Present</span>
                     <h3>Waterloo Aerial Robotics Group (WARG) Student Design Team</h3>
                     <h4>Embedded Flight Software (EFS) Lead and Project Manager</h4>
                     <ul>
@@ -110,6 +133,7 @@
                     </ul>
                 </div>
                 <div class="resume-experience">
+                    <span class="resume-date">Sept. 2025 – Dec. 2025</span>
                     <h3>Ford Motor Company</h3>
                     <h4>Embedded Software Performance, Stability, and Power Optimization Intern</h4>
                     <ul>
@@ -118,6 +142,7 @@
                     </ul>
                 </div>
                 <div class="resume-experience">
+                    <span class="resume-date">Jan. 2025 – May 2025</span>
                     <h3>Waterloo Deep Blue Student Design Team</h3>
                     <h4>Firmware Lead</h4>
                     <ul>
@@ -129,15 +154,7 @@
                     </ul>
                 </div>
                 <div class="resume-experience">
-                    <h3>Standard BioTools</h3>
-                    <h4>Hardware Test Engineering & Research Intern</h4>
-                    <ul>
-                        <li>Optimized pulser design by eliminating parasitic capacitance in the pulser’s PCB, reducing power consumption by 50% & improving thermal dissipation by 20%. This enabled a 1.5x increase in pulsing speed.</li>
-                        <li>Characterized SiCFETs under 1500 V and 120 kHz conditions by analyzing waveform, capacitive and thermal characteristics, testing and eliminating transistor candidates for optimized switching performance.</li>
-                        <li>Refined PCB thermal management by evaluating stack impedance contributions, thermal interface materials and via configurations to maintain component temperatures below 125°C for reliable manufacturability.</li>
-                    </ul>
-                </div>
-                <div class="resume-experience">
+                    <span class="resume-date">May 2024 – Aug. 2024</span>
                     <h3>University of Waterloo WATiMake Lab</h3>
                     <h4>Project Lead & Software Developer</h4>
                     <ul>
@@ -151,70 +168,364 @@
         </div>
 
         <div class="section" id="portfolio">
+            <h2>Portfolio!</h2>
             <div class="portfolio">
-                <h2>Portfolio!</h2>
+                <!-- 1. FBWA Code & Attitude Management SIL -->
                 <div class="portfolio-project">
-                    <h3>Quadruple Star System Simulator & Calculator</h3>
-                    <h4>Developer and Researcher</h4>
-                    <ul>
-                        <li>Researched contemporary astrophysics data to formulate an Excel-based computational model that calculates the properties and orbital positions of celestial bodies (stars, planets, major and minor moons, and asteroids).</li>
-                        <li>Initiated the development of a dynamic mobile application using Python, designed to simulate a user-input-driven solar system containing up to 4 stars with MATLAB.</li>
-                    </ul>
+                    <div class="card-visible">
+                        <h3>FBWA Code & Attitude Management SIL</h3>
+                        <h4>Waterloo Aerial Robotics Group (WARG) Student Design Team</h4>
+                        <p class="summary">Architected C++ FBWA flight stack modules and led a Software-in-the-Loop Simulink simulation featuring 6-DOF rigid body dynamics for fixed-wing UAVs.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">C++</span>
+                            <span class="portfolio-tag">Simulink</span>
+                            <span class="portfolio-tag">STM32 Cube IDE</span>
+                            <span class="portfolio-tag">PID</span>
+                            <span class="portfolio-tag">Aerodynamics</span>
+                        </div>
+                    </div>
+                    <div class="project-details" style="display: none;">
+                        <ul>
+                            <li>Architected a C++ FBWA attitude management module for the ZeroPilot (fixed-wing aircraft) project's flight stack, mapping RC inputs to pitch and roll setpoints within a ±45°/±20° flight envelope using Git and STM32 CUBE IDE.</li>
+                            <li>Developed a PID class featuring anti-windup clamping and a derivative low-pass filter to manage high-frequency sensor noise and prevent actuator saturation.</li>
+                            <li>Leading a team architecting a Software-in-the-Loop (SIL) model in Simulink, integrating non-linear aerodynamics and 6-DOF rigid body dynamics for high-fidelity vehicle simulation.</li>
+                        </ul>
+                        <div class="portfolio-media-group two-col">
+                            <figure class="portfolio-media-item">
+                                <img src="assets/image1_sil_rigid_body.png" alt="Rigid Body Dynamics Subsystem">
+                                <figcaption class="media-caption">Image 1: Rigid Body Dynamics Subsystem of the SIL model.</figcaption>
+                            </figure>
+                            <figure class="portfolio-media-item">
+                                <img src="assets/image2_pid_code.png" alt="PID output function">
+                                <figcaption class="media-caption">Image 2: PID output function as part of a PID object class.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/UWARG/efs-zeropilot-4.0/pull/83" class="portfolio-link-btn" target="_blank">FBWA GitHub Branch</a>
+                            <a href="https://docs.google.com/document/d/1MA7GJNuBHVB6PlLYq35-b_lbBe5ShXYn/edit" class="portfolio-link-btn" target="_blank">Technical Report</a>
+                            <a href="https://github.com/UWARG/efs-aircraft-sil" class="portfolio-link-btn" target="_blank">AM SITL Simulink Model Repo</a>
+                            <a href="https://uwarg-docs.atlassian.net/wiki/spaces/efs/pages/3406430213/AM+SIL+Documentation" class="portfolio-link-btn" target="_blank">Confluence Docs</a>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- 2. The Ball Balancer Project -->
                 <div class="portfolio-project">
-                    <h3>SARGe (Search and Rescue Giganotosaurus) Robot</h3>
-                    <h4>Director & Software Developer</h4>
-                    <ul>
-                        <li>Led a 4-person team to program (in a specialized version of C) and build a prototypical search-and-rescue robot.</li>
-                        <li>Includes functionalities such as: an obstacle avoidance program that reduced collision incidents by a rate of 95%; an infrared navigation system and sound detection system with a locator accuracy rate of 80% and 87%.</li>
-                        <li>As a result, the time taken to rescue survivors decreased by a remarkable 50%.</li>
-                    </ul>
+                    <div class="card-visible">
+                        <h3>The Ball Balancer Project</h3>
+                        <h4>University of Waterloo's WATiMake Lab</h4>
+                        <p class="summary">Developed machine vision tracking, I2C dynamic communication, and tuned PID control to stabilize a 3-RPS parallel axis manipulator platform in real time.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Python</span>
+                            <span class="portfolio-tag">OpenCV</span>
+                            <span class="portfolio-tag">C++</span>
+                            <span class="portfolio-tag">Raspberry Pi 5</span>
+                            <span class="portfolio-tag">Arduino Mega</span>
+                            <span class="portfolio-tag">PID Controls</span>
+                        </div>
+                    </div>
+                    <div class="project-details" style="display: none;">
+                        <ul>
+                            <li>Wrote a machine vision algorithm in Python on a Raspberry Pi 5 that tracks the coordinates of the ball in real-time using the OpenCV library.</li>
+                            <li>Developed an I2C bridge in C++ between a Raspberry Pi 5 and an Arduino Mega for high-speed location data transmissions, enhancing real-time I/O throughput and processing distribution.</li>
+                            <li>Designed a PID control system in Python to automate the stabilization of a 3-RPS parallel axis manipulator with NEMA 17 stepper motors and TB6600 drivers.</li>
+                            <li>Optimized and iteratively tuned the derivative and integral gains of the platform's kinematics using the Ziegler-Nichols method to mitigate mechanical oscillations.</li>
+                        </ul>
+                        <div class="portfolio-media-group two-col">
+                            <figure class="portfolio-media-item">
+                                <img src="assets/image3_ball_balancer_base.png" alt="Ball Balancer Hardware Base">
+                                <figcaption class="media-caption">Image 3: Motor drivers, Arduino Mega, Raspberry Pi 5, and prototype 3-RPS manipulator.</figcaption>
+                            </figure>
+                            <figure class="portfolio-media-item">
+                                <img src="assets/image4_ball_balancer_stand.png" alt="Ball Balancer Stand & Camera">
+                                <figcaption class="media-caption">Image 4: Ball Balancer with vision camera mounted on laser-cut stand.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/EemanAleem/The-Ball-Balancer" class="portfolio-link-btn" target="_blank">GitHub Repository</a>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- 3. Quadruple Star System Simulator & Calculator -->
                 <div class="portfolio-project">
-                    <h3>Employee & Tool Security System Prototype (ETSS)</h3>
-                    <h4>Director & Software Developer</h4>
-                    <ul>
-                        <li>Won the ACRES Industry Innovation Competition, run by ACRES Enterprises and Thompson Rivers University.</li>
-                        <li>Technologies used: C++, Arduino Mega, Sketchfab, various sensors & actuators.</li>
-                        <li>Implemented two-factor authentication on site and inventory rooms; engineered a 100% accurate tool-tracking system; developed alarms of intrusion; designed a database program, recording employees’ and tools’ locations.</li>
-                    </ul>
+                    <div class="card-visible">
+                        <h3>Quadruple Star System Simulator & Calculator</h3>
+                        <h4>Developer and Researcher</h4>
+                        <p class="summary">Researched astrophysics data and developed computational models in Python and MATLAB to calculate and simulate celestial orbital mechanics in multi-star systems, currently ongoing!</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Python</span>
+                            <span class="portfolio-tag">MATLAB</span>
+                            <span class="portfolio-tag">Astrophysics</span>
+                            <span class="portfolio-tag">Excel</span>
+                        </div>
+                    </div>
+                    <div class="project-details" style="display: none;">
+                        <ul>
+                            <li>Researched contemporary astrophysics data to formulate an Excel-based computational model that calculates the properties and orbital positions of celestial bodies (stars, planets, major and minor moons, and asteroids).</li>
+                            <li>Initiated the development of a dynamic mobile application using Python, designed to simulate a user-input-driven solar system containing up to 4 stars with MATLAB.</li>
+                        </ul>
+                        <div class="portfolio-links">
+                            <a href="https://docs.google.com/spreadsheets/d/1642CRhk0cFoovVfPkL_1TE8Io6ReuWdzv1i_xKVCdNk/edit?gid=0#gid=0" class="portfolio-link-btn" target="_blank">Excel Sheet</a>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- 4. Bare-Metal ADC Polling Driver -->
                 <div class="portfolio-project">
-                    <h3>“Light in my Hands” 3D Animated Short Film</h3>
-                    <h4>Sole Animator</h4>
-                    <p>Created a 3D model and implemented innovative character animations in a 3D environment using Blender, Onshape and Sketchfab. 
-                        Manipulated light, color, and shadow to efficiently convey cinematic motion.</p>
-                    <div class="portfolio-images">
-                        <video
-                            src="assets/light-in-my-hands.mp4"
-                            class="portfolio-image device"
-                            autoplay
-                            loop
-                            muted
-                            playsinline>
-                        </video>
+                    <div class="card-visible">
+                        <h3>Bare-Metal ADC Polling Driver</h3>
+                        <h4>UW Deep Blue Student Design Team</h4>
+                        <p class="summary">Developed a bare-metal C ADC driver for STM32F411RC register manipulation to achieve reliable, low-latency analog sensor data acquisition.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">C</span>
+                            <span class="portfolio-tag">Bare-Metal</span>
+                            <span class="portfolio-tag">STM32F411RC</span>
+                            <span class="portfolio-tag">RealTerm</span>
+                        </div>
+                    </div>
+                    <div class="project-details" style="display: none;">
+                        <ul>
+                            <li>Developed a bare-metal ADC driver for the STM32F411RC board to handle analog sensor acquisition by directly manipulating ADC CR and SQR registers, achieving reliable real-time data conversion verified via RealTerm.</li>
+                            <li>Created high-accuracy voltage sampling by configuring peripheral clock prescalers and channel sequence registers in C, which eliminated HAL overhead and ensured low-latency telemetry.</li>
+                            <li>Validated ADC peripheral functionality by implementing a single-conversion mode driver and analyzing raw digital outputs via UART, resulting in a 100% success rate.</li>
+                        </ul>
+                        <div class="portfolio-media-group">
+                            <figure class="portfolio-media-item">
+                                <img src="assets/image5_adc_code.png" alt="ADC Initialization Snippet">
+                                <figcaption class="media-caption">Image 5: Code Snippet of the ADC initialization function for the driver.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/uwdeepblue/firmware/tree/ADC_Polling_Baremetal" class="portfolio-link-btn" target="_blank">ADC Driver GitHub Branch</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. STM32F411RC Bare-Metal Drivers -->
+                <div class="portfolio-project">
+                    <div class="card-visible">
+                        <h3>STM32F411RC Bare-Metal Drivers</h3>
+                        <h4>Self-Learning Project</h4>
+                        <p class="summary">Created a suite of bare-metal C drivers for STM32F411RC peripherals (GPIO, UART, ADC, I2C, SPI, Timers) without abstraction libraries.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">C</span>
+                            <span class="portfolio-tag">STM32F411RC</span>
+                            <span class="portfolio-tag">Bare-Metal</span>
+                            <span class="portfolio-tag">Peripherals</span>
+                        </div>
+                    </div>
+                    <div class="project-details" style="display: none;">
+                        <ul>
+                            <li>Created a suite of bare-metal C drivers for the STM32F411RC to master register-level hardware control by programming GPIO, UART, ADC, I2C, SPI, and Timers without abstraction libraries.</li>
+                            <li>Validated data integrity through real-time bitstream analysis in RealTerm.</li>
+                        </ul>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/EemanAleem/stm32_baremetal_drivers" class="portfolio-link-btn" target="_blank">GitHub Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. STM32 PWM-SPI Motor Controller -->
+                <div class="portfolio-project">
+                    <div class="card-visible">
+                        <h3>STM32 PWM-SPI Motor Controller</h3>
+                        <h4>Waterloo Aerial Robotics Group (WARG) Student Design Team</h4>
+                        <p class="summary">Programmed an STM32-based motor controller converting analog inputs to high-resolution PWM signals via full-duplex SPI communication with an external MCP4000 ADC.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">STM32</span>
+                            <span class="portfolio-tag">SPI</span>
+                            <span class="portfolio-tag">PWM</span>
+                            <span class="portfolio-tag">C</span>
+                            <span class="portfolio-tag">Firmware</span>
+                        </div>
+                    </div>
+                    <div class="project-details" style="display: none;">
+                        <ul>
+                            <li>Wrote an STM32-based motor controller to translate analog potentiometer inputs into high-resolution PWM signals by implementing a full-duplex SPI communication routine with an external MCP4000 ADC.</li>
+                            <li>Developed a driver-level firmware routine to handle 10-bit sensor data acquisition by manually toggling GPIO Chip Select (CS) pins and utilizing bitwise manipulation to reconstruct fragmented SPI RX buffers into usable telemetry, ensuring data integrity for actuator control.</li>
+                        </ul>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/EemanAleem/embedded-flight-software-bootcamp/tree/master" class="portfolio-link-btn" target="_blank">Motor Controller GitHub Branch</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Employee & Tool Security System (ETSS) -->
+                <div class="portfolio-project">
+                    <div class="card-visible">
+                        <h3>Employee & Tool Security System (ETSS)</h3>
+                        <h4>ACRES Industry Competition - 1st Place Winner</h4>
+                        <p class="summary">Award-winning 2FA industrial security system incorporating RFID, keypad authentication, PIR intrusion detection, and real-time LCD status updates.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">C++</span>
+                            <span class="portfolio-tag">Arduino Mega</span>
+                            <span class="portfolio-tag">RFID RC522</span>
+                            <span class="portfolio-tag">Sensors</span>
+                        </div>
+                    </div>
+                    <div class="project-details" style="display: none;">
+                        <ul>
+                            <li>Engineered a Two-Factor Authentication (2FA) access controller for high-security construction site rooms by integrating an RC522 RFID module and a 4x4 membrane keypad with an Arduino Mega.</li>
+                            <li>Utilized a HC-SR501 PIR motion sensor by programming an interrupt-style polling loop that triggers a passive buzzer alarm and LCD "Intruder Alert" notification upon unauthorized movement.</li>
+                            <li>Implemented a real-time user interface using the LiquidCrystal library and a 10k potentiometer to provide dynamic system feedback and visual status updates.</li>
+                        </ul>
+                        <div class="portfolio-media-group">
+                            <figure class="portfolio-media-item">
+                                <img src="assets/image6_etss_circuitry.png" alt="ETSS Circuitry">
+                                <figcaption class="media-caption">Image 6: Circuitry w/ Arduino, LCD1602.</figcaption>
+                            </figure>
+                            <figure class="portfolio-media-item">
+                                <img src="assets/image7_etss_sensors.png" alt="Ball Balancer Stand & Camera">
+                                <figcaption class="media-caption">Image 7: Circuitry with RC522 RFID & Membrane Switch Modules.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/EemanAleem/ETSS/tree/main" class="portfolio-link-btn" target="_blank">GitHub Repository</a>
+                            <a href="https://drive.google.com/file/d/100p6gGlj7yXfq-jYvflQmXXkO9s9VGl6/view" class="portfolio-link-btn" target="_blank">Prototype Demo Video</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. SARGe (Search and Rescue Giganotosaurus) Robot -->
+                <div class="portfolio-project">
+                    <div class="card-visible">
+                        <h3>SARGe (Search and Rescue Giganotosaurus) Robot</h3>
+                        <h4>Director & Software Developer</h4>
+                        <p class="summary">Led a team to program and build an autonomous search-and-rescue robot featuring 95% collision reduction and acoustic/infrared navigation.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">C</span>
+                            <span class="portfolio-tag">Sensors</span>
+                            <span class="portfolio-tag">Robotics</span>
+                        </div>
+                    </div>
+                    <div class="project-details" style="display: none;">
+                        <ul>
+                            <li>Led a 4-person team to program (in a specialized version of C) and build a prototypical search-and-rescue robot.</li>
+                            <li>Includes functionalities such as: an obstacle avoidance program that reduced collision incidents by a rate of 95%; an infrared navigation system and sound detection system with a locator accuracy rate of 80% and 87%.</li>
+                            <li>As a result, the time taken to rescue survivors decreased by a remarkable 50%.</li>
+                        </ul>
+                        <div class="portfolio-links">
+                            <a href="https://docs.google.com/document/d/1jN9gkSk7Ca3yS7f7hMB8nwz6qp6aqcr0a2r32fB-1j8/edit?usp=sharing" class="portfolio-link-btn" target="_blank">Technical Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. AC-Coupled Electret Microphone -->
+                <div class="portfolio-project">
+                    <div class="card-visible">
+                        <h3>AC-Coupled Electret Microphone</h3>
+                        <h4>MTE 220 Sensors & Instrumentation Project</h4>
+                        <p class="summary">Designed an AC-coupled differential pre-amplifier circuit with overvoltage protection achieving 100 V/V gain and 200 kHz bandwidth for high-fidelity ADC interfacing.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">LTSpice</span>
+                            <span class="portfolio-tag">Analog Circuits</span>
+                            <span class="portfolio-tag">INA128</span>
+                            <span class="portfolio-tag">Filters</span>
+                        </div>
+                    </div>
+                    <div class="project-details" style="display: none;">
+                        <ul>
+                            <li>Designed a differential pre-amplifier for &lt;0.5V mic signals using an INA128 and JFET buffer, achieving a 100 V/V gain and 200 kHz bandwidth for high-fidelity ADC interfacing.</li>
+                            <li>Engineered an AC-coupled input stage to reject DC offsets and common-mode noise by calculating 5 Hz high-pass filters, ensuring maximum voltage swing and signal symmetry.</li>
+                        </ul>
+                        <div class="portfolio-media-group">
+                            <figure class="portfolio-media-item">
+                                <img src="assets/image8_microphone_schematic.png" alt="Electret Microphone LTSpice Schematic">
+                                <figcaption class="media-caption">Image 8: LTSpice Schematic of the AC-Coupled Electret Microphone.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://drive.google.com/file/d/1iU0tvbYBR8m5nMcLnrl4DxGW9ky2hysH/view" class="portfolio-link-btn" target="_blank">Design Report</a>
+                            <a href="https://drive.google.com/file/d/1KLkzBKqfPOS2wUx5xZhQdpk0zyKtP1R5/view" class="portfolio-link-btn" target="_blank">LTSpice Schematic</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Mass Cytometry Time-of-Flight PCB Validation -->
+                <div class="portfolio-project">
+                    <div class="card-visible">
+                        <h3>Mass Cytometry Time-of-Flight PCB Validation</h3>
+                        <h4>Standard BioTools Internship Project</h4>
+                        <p class="summary">Optimized PCB pulser design to decrease power consumption by 50% and characterized 1500V SiCFETs under high-frequency switching conditions.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">PCB Design</span>
+                            <span class="portfolio-tag">Thermal Management</span>
+                            <span class="portfolio-tag">SiCFETs</span>
+                            <span class="portfolio-tag">Hardware Research</span>
+                        </div>
+                    </div>
+                    <div class="project-details" style="display: none;">
+                        <ul>
+                            <li>Optimized pulser design by eliminating parasitic capacitance in the pulser's PCB, reducing power consumption by 50% & improving thermal dissipation by 20%. This enabled a 1.5x increase in pulsing speed.</li>
+                            <li>Characterized SiCFETs under 1500 V and 120kHz conditions by analyzing waveform, capacitive and thermal characteristics, testing and eliminating transistor candidates for optimized switching performance.</li>
+                            <li>Refined PCB thermal management by evaluating stack impedance contributions, thermal interface materials and via configurations to maintain component temperatures below 125°C for reliable manufacturability.</li>
+                            <li>Presented ELNBs with the above experimental procedures & data analysis to the broader R&D team.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 11. “Light in my Hands” 3D Animated Short Film -->
+                <div class="portfolio-project">
+                    <div class="card-visible">
+                        <h3>“Light in my Hands” 3D Animated Short Film</h3>
+                        <h4>Sole Animator</h4>
+                        <p class="summary">3D animated short film featuring custom dynamic character motion and cinematic lighting techniques rendered across Blender and Onshape.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Blender</span>
+                            <span class="portfolio-tag">Onshape</span>
+                            <span class="portfolio-tag">Sketchfab</span>
+                        </div>
+                    </div>
+                    <div class="project-details" style="display: none;">
+                        <p>Created a 3D model and implemented innovative character animations in a 3D environment using Blender, Onshape and Sketchfab. Manipulated light, color, and shadow to efficiently convey cinematic motion.</p>
+                        <div class="portfolio-media-group">
+                            <figure class="portfolio-media-item">
+                                <video src="assets/light-in-my-hands.mp4" autoplay loop muted playsinline></video>
+                            </figure>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div id="portfolio-overlay" class="portfolio-overlay">
+            <button class="portfolio-nav-btn prev-btn"><i class="bx bx-chevron-left"></i></button>
+            <div class="portfolio-window">
+                <span class="portfolio-close-btn">&times;</span>
+                <div id="portfolio-overlay-body"></div>
+            </div>
+            <button class="portfolio-nav-btn next-btn"><i class="bx bx-chevron-right"></i></button>
+        </div>
 
-        <div class="section" id="certs">
-            <h2>Certifications</h2>
+
+        <!-- <div class="section" id="certs">
+            <h2>Certs</h2>
             <div class="certifications">
                 <div class="certification">
                     <h3></h3>
                     <h4></h4>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="section" id="contact">
-            <h2>Contact Me</h2>
                 <div class="contact-me">
-                    <p>
-                        
-                    </p>
+                    <h2>Contact Me</h2>
+                    <h3>
+                        Feel free to reach out for internship opportunities, project collaborations, or to connect!
+                    </h3>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/eeman-aleem-023329227/" target="_blank" aria-label="LinkedIn">
+                            <i class="bx bxl-linkedin-square"></i>
+                        </a>
+                        <a href="https://github.com/EemanAleem" target="_blank" aria-label="GitHub">
+                            <i class="bx bxl-github"></i>
+                        </a>
+                        <a href="#" class="copy-link" data-text="eemanaleem@gmail.com" aria-label="Copy Email">
+                            <i class="bx bx-at"></i>
+                        </a>
+                    </div>
                 </div>
         </div>
 

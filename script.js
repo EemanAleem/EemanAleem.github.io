@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 2. Dynamic Playback Speed on Scroll
     let scrollTimeout;
     const NORMAL_SPEED = 1.0;
-    const SCROLL_SPEED = 7.0; // Playback speed while scrolling
+    const SCROLL_SPEED = 1.5; // Playback speed while scrolling
     window.addEventListener('scroll', () => {
         if (!bgVideo || bgVideo.readyState < 2) return;
 
@@ -31,6 +31,83 @@ document.addEventListener("DOMContentLoaded", function() {
             bgVideo.playbackRate = NORMAL_SPEED;
         }, 150);
     }, { passive: true });
+
+    document.querySelectorAll('.copy-link').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevents page jumping to top
+            const textToCopy = this.getAttribute('data-text');
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                alert('Text copied to clipboard!'); 
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        });
+    });
+
+    // Portfolio Popup Overlay & Navigation
+    const overlay = document.getElementById('portfolio-overlay');
+    const overlayBody = document.getElementById('portfolio-overlay-body');
+    const closeBtn = document.querySelector('.portfolio-close-btn');
+    const prevBtn = document.querySelector('.portfolio-nav-btn.prev-btn');
+    const nextBtn = document.querySelector('.portfolio-nav-btn.next-btn');
+    const projects = Array.from(document.querySelectorAll('.portfolio-project'));
+
+    let currentProjectIndex = 0;
+
+    function renderProjectModal(index) {
+        const project = projects[index];
+        const title = project.querySelector('h3')?.outerHTML || '';
+        const subtitle = project.querySelector('h4')?.outerHTML || '';
+        const tags = project.querySelector('.portfolio-tags')?.cloneNode(true);
+        const details = project.querySelector('.project-details')?.cloneNode(true);
+
+        // Place tag pills directly below bullet points and before links
+        if (details && tags) {
+            const links = details.querySelector('.portfolio-links');
+            if (links) {
+                details.insertBefore(tags, links);
+            } else {
+                details.appendChild(tags);
+            }
+        }
+
+        overlayBody.innerHTML = `
+            ${title}
+            ${subtitle}
+            ${details ? details.innerHTML : ''}
+        `;
+    }
+
+    projects.forEach((project, index) => {
+        project.addEventListener('click', () => {
+            currentProjectIndex = index;
+            renderProjectModal(currentProjectIndex);
+            overlay.classList.add('active');
+        });
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => overlay.classList.remove('active'));
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentProjectIndex = (currentProjectIndex - 1 + projects.length) % projects.length;
+            renderProjectModal(currentProjectIndex);
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            currentProjectIndex = (currentProjectIndex + 1) % projects.length;
+            renderProjectModal(currentProjectIndex);
+        });
+    }
+
+    window.addEventListener('click', (e) => {
+        if (e.target === overlay) overlay.classList.remove('active');
+    });
 
 
     // Focus observer for cards
@@ -57,4 +134,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }, observerOptions);
 
     glassPanels.forEach(panel => observer.observe(panel));
+
+    
 });
