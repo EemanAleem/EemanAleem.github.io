@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const textToCopy = this.getAttribute('data-text');
 
             navigator.clipboard.writeText(textToCopy).then(() => {
-                alert('Text copied to clipboard!'); 
+                alert('Copied email: eemanaleem@gmail.com'); 
             }).catch(err => {
                 console.error('Failed to copy: ', err);
             });
