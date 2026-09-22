@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 2. Dynamic Playback Speed on Scroll
     let scrollTimeout;
     const NORMAL_SPEED = 1.0;
-    const SCROLL_SPEED = 1.5; // Playback speed while scrolling
+    const SCROLL_SPEED = 2.0; // Playback speed while scrolling
     window.addEventListener('scroll', () => {
         if (!bgVideo || bgVideo.readyState < 2) return;
 
@@ -109,31 +109,50 @@ document.addEventListener("DOMContentLoaded", function() {
         if (e.target === overlay) overlay.classList.remove('active');
     });
 
+    // Inject expand icon into portfolio media items
+    document.querySelectorAll('.portfolio-media-item').forEach(item => {
+        const media = item.querySelector('img, video');
+        if (!media) return;
 
-    // Focus observer for cards
-    const observerOptions = {
-        root: null,
-        rootMargin: '-45% 0px -45% 0px',
-        threshold: 0
-    };
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                glassPanels.forEach(p => {
-                    p.classList.remove('active-focus');
-                    p.style.setProperty('--pointer-opacity', '0');
-                });
-                entry.target.classList.add('active-focus');
-                entry.target.style.setProperty('--pointer-opacity', '1');
+        // Create a tight wrapper around just the media element
+        const wrapper = document.createElement('div');
+        wrapper.className = 'portfolio-media-wrapper';
+        media.parentNode.insertBefore(wrapper, media);
+        wrapper.appendChild(media);
 
-                entry.target.classList.remove('active-glitch');
-                void entry.target.offsetWidth; 
-                entry.target.classList.add('active-glitch');
-            }
+        // Append icon inside the media wrapper
+        const icon = document.createElement('i');
+        icon.className = 'bx bx-maximize';
+        wrapper.appendChild(icon);
+    });
+
+
+    // Quick Image Lightbox
+    document.addEventListener('click', (e) => {
+        if (e.target.matches('.portfolio-media-item img')) {
+            const overlay = document.createElement('div');
+            overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.9);backdrop-filter:blur(5px);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:zoom-out;padding:20px;';
+            overlay.innerHTML = `<img src="${e.target.src}" style="max-width:90vw;max-height:85vh;border-radius:8px;border:2px solid #ff4d4d;box-shadow:0 0 30px rgba(0,0,0,0.8);object-fit:contain;">`;
+            overlay.onclick = () => overlay.remove();
+            document.body.appendChild(overlay);
+        }
+    });
+
+    let menuIcon = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('.navbar');
+
+    if (menuIcon && navbar) {
+        menuIcon.onclick = () => {
+            menuIcon.classList.toggle('bx-x');
+            navbar.classList.toggle('active');
+        };
+
+        // Close menu when a navigation link is clicked
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuIcon.classList.remove('bx-x');
+                navbar.classList.remove('active');
+            });
         });
-    }, observerOptions);
-
-    glassPanels.forEach(panel => observer.observe(panel));
-
-    
+    }
 });
